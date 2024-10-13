@@ -1,0 +1,336 @@
+/* Token Variables: I'm using Wise's Design system so I am going to import those design tokens. */
+:root {
+/* Typography */
+
+    /* Display Styles */
+    --font-display-large: 96px;
+    --line-height-display-large: 85%;
+    --letter-spacing-display-large: 2%;
+
+    --font-display-medium: 64px;
+    --line-height-display-medium: 85%;
+    --letter-spacing-display-medium: 1.5%;
+
+    --font-display-small: 40px;
+    --line-height-display-small: 85%;
+    --letter-spacing-display-small: 1.5%;
+
+    /* Title Styles */
+    --font-title-screen: 30px;
+    --line-height-title-screen: 34px;
+    --letter-spacing-title-screen: -2.5%;
+
+    --font-title-section: 26px;
+    --line-height-title-section: 32px;
+    --letter-spacing-title-section: -1.5%;
+
+    --font-title-subsection: 22px;
+    --line-height-title-subsection: 28px;
+    --letter-spacing-title-subsection: -1.5%;
+
+    --font-title-body: 18px;
+    --line-height-title-body: 24px;
+    --letter-spacing-title-body: -1%;
+
+    --font-title-group: 14px;
+    --line-height-title-group: 20px;
+    --letter-spacing-title-group: 1.5%;
+
+    /* Body Styles */
+    --font-body-large: 16px;
+    --line-height-body-large: 24px;
+    --letter-spacing-body-large: -0.5%;
+
+    --font-body-large-bold: 16px;
+    --line-height-body-large-bold: 24px;
+    --letter-spacing-body-large-bold: 0.5%;
+
+    --font-body-default: 14px;
+    --line-height-body-default: 22px;
+    --letter-spacing-body-default: -0.5%;
+
+    --font-body-default-bold: 14px;
+    --line-height-body-default-bold: 22px;
+    --letter-spacing-body-default-bold: 1%;
+
+    /* Link Styles */
+    --font-link-large: 16px;
+    --line-height-link-large: 24px;
+    --letter-spacing-link-large: 1%;
+
+    --font-link-default: 14px;
+    --line-height-link-default: 22px;
+    --letter-spacing-link-default: 1.25%;
+
+    --font-link-underlined: 16px;
+    --line-height-link-underlined: 24px;
+    --letter-spacing-link-underlined: 1%;
+
+/* Padding Tokens */
+--padding-x-small: 8px;
+--padding-small: 16px;
+--padding-medium: 24px;
+--padding-large: 32px;
+
+/* Size Tokens */
+--size-x-small: 24px;
+--size-small: 40px;
+--size-medium: 48px;
+--size-large: 56px;
+--size-x-large: 72px;
+
+/* Border Radius Tokens */
+--radius-small: 16px;
+--radius-medium: 20px;
+--radius-large: 30px;
+--radius-x-large: 40px;
+--radius-2x-large: 60px;
+
+/* Core Colors */
+--primary-color: #FFCB05;  /* U-M Primary Color */
+--secondary-color: #00274C;  /* U-M Secondary Color */
+--bright-green: #9FE870;
+--forest-green: #163300;
+--bright-orange: #FFC091;
+--bright-yellow: #FFEB69;
+--bright-blue: #A0E1E1;
+--bright-pink: #FFD7EF;
+--dark-purple: #260A2F;
+--dark-gold: #3A341C;
+--dark-charcoal: #21231D;
+--dark-maroon: #320707;
+}
+
+
+
+
+
+
+
+
+/* Global Style */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: var(--padding-small); /* Ensure small padding for mobile */
+    background-color: white;
+    color: var(--secondary-color); /* Secondary color for text */
+}
+
+p {
+    font-size: 1rem; /* Mobile-friendly font size */
+    line-height: 1.5rem; /* Spacing for better readability on mobile */
+    margin-bottom: 1rem; /* Adequate spacing between paragraphs */
+}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+
+.skip a{
+    position: absolute;
+    top: -40px;
+  }
+
+.skip a:focus{
+    position: absolute;
+    top: 20px;
+  }
+
+
+
+/* Header Style */
+header{
+    background-color:var(--secondary-color);
+    color:white;
+    padding:var(--padding-large);
+    text-align:center;
+    border-radius:var(--radius-medium);
+}
+
+header img{
+    width:var(--size-medium);
+    border-radius: var(--radius-medium);
+}
+
+
+
+nav ul {
+    display: flex; /* 水平排列导航项 */
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap;
+    padding: 2 rem;
+    margin: 2 rem;
+}
+
+nav ul li {
+    flex-grow: 1; 
+    text-align: center; 
+}
+
+nav ul li a {
+    display: block; 
+    padding: 0.5rem 1rem; 
+    background-color: var(--dark-charcoal); 
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-small);
+    white-space: nowrap; /* 防止文字换行 */
+    text-align: center; 
+    
+}
+
+nav ul li a:hover {
+    background-color: var(--bright-blue); /* 悬停效果 */
+    color: var(--dark-maroon); /* 悬停时文字颜色 */
+}
+
+
+
+
+
+
+
+
+
+
+/* Main Content Styles */
+main{
+    padding:var(--padding-large);
+    background-color: white;
+    border-radius: var(--radius-large);
+    margin-bottom: var(--padding-large);
+}
+h1, h2, h3 {
+    color: var(--secondary-color);
+    margin-bottom: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size:2.5rem;
+    font-weight:bold;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+}
+
+
+/* Typography Classes */
+    .display-large {
+        font-size: var(--font-display-large);
+        line-height: var(--line-height-display-large);
+        letter-spacing: var(--letter-spacing-display-large);
+        text-transform: uppercase;
+    }
+    .display-medium{
+        font-size: var(--font-display-medium);
+        line-height: var(--line-height-display-medium);
+        letter-spacing: var(--letter-spacing-display-medium);
+        text-transform: uppercase;
+    }
+    .display-small{
+        font-size: var(--font-display-small);
+        line-height: var(--line-height-display-small);
+        letter-spacing: var(--letter-spacing-display-small);
+        text-transform: uppercase;
+    }
+
+    /* "Used for the main screen title, should be used only once per screen. It pairs with large body." */
+    .title-screen{
+        font-size: var(--font-title-screen);
+        line-height: var(--line-height-title-screen);
+        letter-spacing: var(--letter-spacing-title-screen);
+        margin-bottom:8px;
+    }
+
+    /* "Handy for dividing your screen into sections. It pairs perfectly with large body. "*/
+    .title-section {
+        font-size: var(--font-title-section);
+        line-height: var(--line-height-title-section);
+        letter-spacing: var(--letter-spacing-title-section);
+        margin-bottom: 8px;
+    }
+    .title-subsection {
+        font-size: var(--font-title-subsection);
+        line-height: var(--line-height-title-subsection);
+        letter-spacing: var(--letter-spacing-title-subsection);
+        margin-bottom: 8px;
+    }
+    .title-body {
+        font-size: var(--font-title-body);
+        line-height: var(--line-height-title-body);
+        letter-spacing: var(--letter-spacing-title-body);
+        margin-bottom: 8px;
+    }
+    .body-large {
+        font-size: var(--font-body-large);
+        line-height: var(--line-height-body-large);
+        letter-spacing: var(--letter-spacing-body-large);
+        margin-bottom: 8px;
+    }
+
+    .body-default {
+        font-size: var(--font-body-default);
+        line-height: var(--line-height-body-default);
+        letter-spacing: var(--letter-spacing-body-default);
+        margin-bottom: 8px;
+    }
+
+    .link-large {
+        font-size: var(--font-link-large);
+        line-height: var(--line-height-link-large);
+        letter-spacing: var(--letter-spacing-link-large);
+        text-decoration: underline;
+    }
+
+    .link-default {
+        font-size: var(--font-link-default);
+        line-height: var(--line-height-link-default);
+        letter-spacing: var(--letter-spacing-link-default);
+        text-decoration: underline;
+    }
+
+
+
+
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--padding-large);
+    text-align: center;
+    border-radius: var(--radius-large);
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--bright-pink);
+    text-decoration: underline;
+}
